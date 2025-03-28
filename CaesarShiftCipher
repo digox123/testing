@@ -4,15 +4,15 @@ public class CaesarShiftCipher {
 
     public String caesarShiftCipher(String message, int shift) {
         StringBuilder sb = new StringBuilder();
-        shift = shift % 26; // Asegura que el shift esté dentro de los 26 caracteres del alfabeto
+        shift = shift % 26; 
 
         for (char currentChar : message.toCharArray()) {
             if (currentChar == ' ') { 
-                sb.append(currentChar); // Mantiene los espacios sin cambios
+                sb.append(currentChar); 
                 continue;
             }
             if (currentChar < 'a' || currentChar > 'z') {
-                return "invalid"; // Si hay un carácter no permitido, retorna "invalid"
+                return "invalid";
             }
 
             char shiftedChar = (char) (currentChar + shift);
